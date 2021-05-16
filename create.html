@@ -1,0 +1,1482 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Alpiland Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site Description Here">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/font-rubiklato.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700%7CRubik:300,400,500" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/footer-heart.png">
+    <style>
+        .alpi-logo {
+            top: -91px;
+            max-width: 278px;
+            right: 59px;
+            z-index: 999;
+        }
+
+        .second-left {
+            left: 111px;
+        }
+
+        .first-right {
+            right: 111px;
+        }
+
+        .cheese-not-selected {
+            opacity: 0.5;
+        }
+
+        .header-row {
+            max-height: 100px;
+        }
+
+        .header-col {
+            max-height: 100px;
+        }
+
+        .learn-more {
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: #00205C;
+            color: white;
+            border: 0.1px !important;
+            border-radius: 4.5px;
+            outline: none !important;
+            width: 217px;
+            height: 52px;
+        }
+
+        .learn-more:focus,
+        .learn-more:hover {
+            background-color: #EA002A;
+            outline: none !important;
+        }
+
+        .blue-icons {
+            margin-top: 105px
+        }
+
+        footer {
+            margin-top: 100px;
+            background-image: url(img/alpiland_milk_Feb_20_F_larger-shadow.png);
+            background-size: contain;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        .alpi-gallery {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        .photo-grid {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .dropdown__container {
+            position: absolute;
+            top: 20px;
+            left: -80px;
+            z-index: 15 !important;
+            max-width: 1920px;
+            left: -97px !important;
+        }
+
+        @font-face {
+            font-family: "Roboto Slab Bold";
+            src: url("fonts/RobotoSlab-Bold.ttf");
+        }
+
+        @font-face {
+            font-family: "Roboto Slab Regular";
+            src: url("fonts/RobotoSlab-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "Roboto Slab Regular Condensed";
+            src: url("fonts/RobotoCondensed-Regular.ttf");
+        }
+
+        .learn-more-text {
+            font-family: 'Roboto Slab Regular', Arial, sans-serif;
+            font-size: 18px;
+            color: white;
+            font-weight: 100 !important;
+        }
+
+        h1 {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 60pt;
+        }
+
+        .h1 {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 35pt;
+            color: #00205C;
+            margin-bottom: 20px !important;
+        }
+
+        .contact-us-title {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 50pt;
+            color: #00205C;
+            margin-bottom: 20px !important;
+        }
+
+        .mozza-title {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 35pt;
+            color: #00205C;
+            margin-top: 50px;
+        }
+
+        .text-prod {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 22px;
+            color: #00205C;
+        }
+
+        .type-prod {
+            font-family: 'Roboto Slab Regular', Arial, sans-serif !important;
+            font-size: 20px;
+            color: #00205C;
+            margin-bottom: 20px !important;
+        }
+
+        .cheese-title {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 24px;
+            color: #00205C;
+            margin-bottom: 20px !important;
+        }
+
+        .cheese-subtitle {
+            font-family: 'Roboto Slab Light', Arial, sans-serif !important;
+            font-size: 20px;
+            color: #00205C;
+            margin-bottom: 20px !important;
+        }
+
+        .breadcrumb {
+            margin-left: 230px;
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 20px;
+            color: #00205C;
+        }
+
+        .breadcrumb-link {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 20px;
+            color: #00205C;
+        }
+
+        .breadcrumb-link:hover {
+            color: #EA002A !important;
+            text-decoration: none !important;
+        }
+
+        .type-prod-btn {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif !important;
+            font-size: 22px;
+            color: #00205C;
+        }
+
+        .create-image {
+            width: 420px;
+            height: auto;
+        }
+
+        .footer-links {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 14pt;
+            color: #00205C !important;
+            margin-bottom: 20px !important;
+        }
+
+        .bar-white {
+            width: 100%;
+            height: 11px;
+            background-color: white;
+            position: fixed;
+            top: 35px;
+            z-index: 14;
+            box-shadow: 0px 0px 20px 10px rgb(126, 125, 125);
+        }
+
+
+
+        .bar-white::after {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 16%;
+            width: 0;
+            height: 0;
+            border-top: solid 10px #ffffff;
+            border-left: solid 13px transparent;
+            border-right: solid 13px transparent;
+        }
+
+        .bar-white::before {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 30.5%;
+            width: 0;
+            height: 0;
+            border-top: solid 10px #ffffff;
+            border-left: solid 13px transparent;
+            border-right: solid 13px transparent;
+            box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
+        }
+
+        .bar-white.show::after {
+            display: block;
+        }
+
+        .bar-white.show-2::before {
+            display: block;
+        }
+
+        .bar-red {
+            display: none;
+            width: 100%;
+            height: 11px;
+            position: absolute;
+            top: 100%;
+            background-color: #EA002A;
+            z-index: 14;
+            box-shadow: 0 8px 10px 0 rgb(126, 125, 125);
+        }
+
+        .bar-red::after {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 49%;
+            width: 0;
+            height: 0;
+            border-top: solid 20px #EA002A;
+            border-left: solid 20px transparent;
+            border-right: solid 20px transparent;
+        }
+
+        .bar-red.show::after {
+            display: block;
+        }
+
+
+        .hidden-white-block {
+            display: none;
+            height: 255px;
+            background: white;
+            position: fixed;
+            top: 30px;
+            z-index: 13;
+            width: 100%;
+        }
+
+        @media screen and (max-height: 1070px) {
+            .hidden-white-block {
+                height: 210px;
+            }
+
+            .hidden-white-block .container {
+                margin-top: 30px;
+            }
+        }
+
+        @media screen and (max-width: 1930px) {
+            .img-carousel {
+                max-width: 1920px !important;
+            }
+        }
+
+        .hidden-white-block-3 {
+            height: 530px;
+            top: 250px;
+            box-shadow: 0px 0px 20px 10px rgb(126, 125, 125);
+        }
+
+        .hidden-white-block-2 {
+            opacity: 100%;
+        }
+
+        .hidden-white-block-1 {
+            opacity: 100%;
+        }
+
+
+        body.main-cursor,
+        body.main-cursor a:hover,
+        body.main-cursor * {
+            cursor: url("img/cursor-heart.png"), auto !important;
+        }
+
+        .carousel-1 {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .carousel-title {
+            font-size: 50pt;
+        }
+
+        .carousel-text {
+            font-size: 20px;
+            font-family: 'Roboto Slab Regular Condensed';
+            color: #00205C;
+        }
+
+        .flickity-page-dots .dot {
+            width: 16px;
+            height: 16px;
+            background-color: #00205C;
+        }
+
+        .flickity-viewport {
+            height: 810.5px !important;
+        }
+
+        .carousel-image-text {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 800px;
+        }
+
+        .flickity-page-dots {
+            top: 80%;
+            height: 10px;
+        }
+
+
+        .carousel-container {
+            height: 785px;
+        }
+
+        .products-items-container {
+            width: 800px;
+        }
+
+        .dropdown__trigger {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 20px;
+            color: #00205C;
+        }
+
+        .dropdown__trigger:hover {
+            color: #EA002A !important;
+            text-decoration: none !important;
+        }
+
+        .korifai-poiot {
+            padding-top: 40px;
+            padding-bottom: 5em !important;
+        }
+
+        .fb-contact:hover {
+            opacity: 0.5;
+        }
+
+        .someicon {
+            display: none;
+        }
+
+        .product-container {
+            max-width: 100% !important;
+        }
+
+        .product-div {
+            max-width: 192;
+        }
+
+        .product-col {
+            width: 350px !important;
+            height: 350px !important;
+        }
+
+        .email-input {
+            border-color: black !important;
+            ;
+        }
+
+        .circular-logos {
+            margin-top: 54px;
+        }
+
+        .circular-logos-sides {
+            margin-top: 105px;
+        }
+
+        .email-input::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: black !important;
+            ;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        .carousel-main-title {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 70px;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .background-image {
+            min-height: 0;
+        }
+
+        .parallax>.background-image-holder {
+            min-height: 0 !important;
+            top: 0 !important;
+        }
+
+        .create-products-row {
+            margin-top: 30px;
+        }
+
+
+        .create-image-wrapper {
+            position: relative;
+        }
+
+        .create-image-wrapper .content-overlay {
+            background: rgba(5, 15, 73, 0.7);
+            position: absolute;
+            height: auto;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        .create-image-wrapper:hover .content-overlay {
+            opacity: 1;
+        }
+
+        .left-horizontal {
+            position: relative;
+            left: 123px;
+        }
+
+        .header-link {
+            color: #fff
+        }
+
+        .hidden-white-block-4 {
+            height: 255px;
+            top: 250px;
+            box-shadow: 0px 0px 20px 10px rgb(126, 125, 125);
+        }
+
+        .cheese-row {
+            margin-top: 30px;
+        }
+
+        .cheese-container {
+            width: 90%;
+        }
+
+        .left-cheese-btn-header {
+            margin-top: 72px;
+        }
+
+        .right-cheese-btn-header {
+            margin-top: 72px;
+        }
+
+        .header-cheese-img {
+            width: 180px;
+            height: auto;
+            margin-bottom: 0;
+        }
+
+        .left-product-btn-header {
+            margin-top: 110px;
+            margin-right: 200px;
+        }
+
+        .right-product-btn-header {
+            margin-top: 110px;
+            margin-left: 200px;
+        }
+
+        .hover-card-text {
+            color: white;
+            height: 100%;
+        }
+
+        .hover-card-logo{
+            margin-top: 25%;
+        }
+
+        .hover-card-text-title {
+            font-family: "Roboto Slab Bold";
+            font-size: 30px;
+        }
+
+        .hover-card-text-description {
+            font-family: "Roboto Condensed Regular";
+            margin-top: 5%;
+            font-size: 22px;
+        }
+        .cheese-subtitle:hover{
+            color:#EA002A;
+        }
+        .register{
+            background-color: #EA002A;
+        }
+        .register:hover{
+            transform: translate3d(0, 0px, 0);
+            -webkit-transform: translate3d(0, 0px, 0);
+            background-color: #00205C!important;
+        }
+    </style>
+</head>
+
+<body class="main-cursor">
+    <div class="someicon"><img src="img/alpiland_heart_stroked.shadow.png"></img></div>
+    <a id="start"></a>
+    <div class="nav-container ">
+        <div class="bar bar--sm visible-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-md-2">
+                        <a href="index.html">
+                            <img class="logo logo-dark" alt="logo" src="https://dev-alpiland-demo-28uus.ondigitalocean.app/img/logo-dark.png" />
+                            <img class=" logo-light alpi-logo" alt="logo" src="img/footer-heart.png" />
+                        </a>
+                    </div>
+                    <div class="col-9 col-md-10 text-right">
+                        <a href="create.html#" class="hamburger-toggle" data-toggle-class="#menu2;hidden-xs hidden-sm">
+                            <i class="icon icon--sm stack-interface stack-menu"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </div>
+        <!--end bar-->
+        <nav id="menu2" class="bar bar-2 hidden-xs bar--transparent bar--absolute" style="width: 100%;height: 35px;position: fixed;margin-top: 0px;">
+            <div class="container">
+                <div class="row header-row">
+                    <div class="col-lg-2 header-col text-center text-left-sm hidden-xs order-lg-2">
+                        <div class="bar__module">
+                            <a href="index.html">
+                                <img class="logo logo-dark" alt="logo" src="https://dev-alpiland-demo-28uus.ondigitalocean.app/img/logo-dark.png" />
+                                <img class=" logo-light alpi-logo" alt="logo" src="img/footer-heart.png" />
+                            </a>
+                        </div>
+                        <!--end module-->
+                    </div>
+                    <div class="col-lg-5 order-lg-1 header-col" style="top: -7px;">
+                        <div class="bar__module">
+                            <ul class="menu-horizontal text-left">
+                                <li class="dropdown">
+                                    <span id="our_products" class="dropdown__trigger header-link">τα προϊόντα μας</span>
+                                </li>
+                                <li class="dropdown second-left">
+                                    <span id="create" class="dropdown__trigger header-link">δημιουργήστε</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 header-col text-right text-left-xs text-left-sm order-lg-3" style="top: -7px;">
+                        <div class="bar__module">
+                            <ul class="menu-horizontal left-horizontal text-left">
+                                <li class="dropdown first-right">
+                                    <span class="dropdown__trigger header-link">γνωρίστε μας</span>
+                                </li>
+                                <li class="dropdown">
+                                    <span class="dropdown__trigger header-link">επικοινωνία</span>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="dropdown__content col-lg-2 col-md-4">
+                                                    <ul class="menu-vertical">
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">About</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="dropdown__content col-lg-2">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-about-company.html">
+                                                                                        About Company
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-about-team.html">
+                                                                                        About Team
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-about-me.html">
+                                                                                        About Me
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-about-history.html">
+                                                                                        About History
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Careers</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-careers.html">
+                                                                                        Careers Listing
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-careers-single.html">
+                                                                                        Career Single
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Contact</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-map-1.html">
+                                                                                        Contact Map 1
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-map-2.html">
+                                                                                        Contact Map 2
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-map-3.html">
+                                                                                        Contact Map 3
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-map-4.html">
+                                                                                        Contact Map 4
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-planner-1.html">
+                                                                                        Contact Planner 1
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-planner-2.html">
+                                                                                        Contact Planner 2
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Pricing</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-pricing-1.html">
+                                                                                        Pricing Plans 1
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-pricing-2.html">
+                                                                                        Pricing Plans 2
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-pricing-3.html">
+                                                                                        Pricing Plans 3
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Services</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-services-1.html">
+                                                                                        Services 1
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-services-2.html">
+                                                                                        Services 2
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-services-3.html">
+                                                                                        Services 3
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown separate">
+                                                            <span class="dropdown__trigger">Accounts</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-profile.html">
+                                                                                        Public Profile
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-settings.html">
+                                                                                        Account Settings
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-login-1.html">
+                                                                                        Login Simple
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-login-2.html">
+                                                                                        Login Social
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-create-1.html">
+                                                                                        Create Simple
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-create-2.html">
+                                                                                        Create Social
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-recover.html">
+                                                                                        Recover Account
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Utilities</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-conversation.html">
+                                                                                        Conversation
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="404.html">
+                                                                                        Error 404
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/500.html">
+                                                                                        Error 500
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-maintnence.html">
+                                                                                        Maintnence Mode
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-onboarding.html">
+                                                                                        Onboarding
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-search-results-list.html">
+                                                                                        Search Results List
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-search-results.html">
+                                                                                        Search Results Boxes
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!--end dropdown content-->
+                                            </div>
+                                            <!--end row-->
+                                        </div>
+                                    </div>
+                                    <!--end dropdown container-->
+                                </li>
+                            </ul>
+                        </div>
+                        <!--end module-->
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </nav>
+        <div class="bar-white">
+            <div class="container"></div>
+        </div>
+
+        <div class="hidden-white-block-1 hidden-white-block">
+            <div class="row justify-content-center h-100">
+                <div class="d-flex align-items-center h-100">
+                    <div class="container">
+                        <div class="row products-items-container align-items-center">
+                            <div class="col-md-4">
+                                <div class="row justify-content-center">
+                                    <img src="img/cheese-icon.png" alt="logo">
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 ">
+                                <div class="row justify-content-center">
+                                    <img src="img/milk-icon.png" alt="logo">
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row justify-content-center">
+                                    <img src="img/award-icon.png" alt="logo">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row products-items-container align-items-center mt-3">
+                            <div class="col-md-4">
+
+                                <div class="row justify-content-center">
+                                    <a id="cheese" class="dropdown__trigger" href="cheese.html">τυριά Alpiland</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 ">
+
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">γάλα-ροφήματα Alpiland</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">delicatessen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bar-red">
+                    <div class="container"></div>
+                </div>
+                <div class="hidden-white-block hidden-white-block-4">
+                    <div class="row justify-content-center cheese-row">
+                        <div class="row justify-content-around cheese-container">
+                            <div>
+                                <img class="left-product-btn left-cheese-btn-header" src="img/left-btn.png">
+                            </div>
+                            <div class="">
+                                <img class="header-cheese-img" src="img/alpiland_cheese_slices_emmental_Aug_20_01.png"
+                                    alt="" />
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">Edam Alpiland</span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <img class="header-cheese-img" src="img/alpiland_cheese_slices_emmental_Aug_20_01.png"
+                                    alt="" />
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">Emmental Alpiland</span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <a href="gouda.html"><img class="header-cheese-img" src="img/alpiland_cheese&#32;slices_gouda_Aug&#32;20_01.png"alt="" id="gouda-img"/></a>
+                                <div class="row justify-content-center">
+                                    <a class="dropdown__trigger" href="gouda.html" style="text-decoration: none;" id="gouda-link">Gouda Alpiland</a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <a href="cheese.html"><img class="header-cheese-img" src="img/alpiland_cheese&#32;slices_mozzarella_Aug&#32;20_01.png" id="mozzarella-img" alt="" /></a>
+                                <div class="row justify-content-center">
+                                    <a class="dropdown__trigger" href="cheese.html" id="mozzarella-link" style="text-decoration: none;">Mozzarella Alpiland</a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <img class="header-cheese-img" src="img/alpiland_cheese_slices_emmental_Aug_20_01.png"
+                                    alt="" />
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">Σαγανάκι Alpiland</span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <img class="header-cheese-img"
+                                    src="img/alpiland_grated_cheese_kefaloturi_Aug_20_01.png" alt="" />
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">Κεφαλοτύρι Alpiland</span>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="right-product-btn right-cheese-btn-header" src="img/right-btn.png">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="hidden-white-block-2 hidden-white-block">
+            <div class="row justify-content-center h-100">
+                <div class="d-flex align-items-center h-100">
+                    <div class="container">
+                        <div class="row products-items-container align-items-center">
+                            <div class="col-md-4">
+                                <div class="row justify-content-center">
+                                    <img src="img/serve.png" alt="logo">
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 ">
+                                <div class="row justify-content-center">
+                                    <img src="img/cook.png" alt="logo">
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row justify-content-center">
+                                    <img src="img/salad.png" alt="logo">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row products-items-container align-items-center mt-3">
+                            <div class="col-md-4">
+
+                                <div class="row justify-content-center">
+                                    <span id="pleasure" class="dropdown__trigger">απόλαυση στο max</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 ">
+
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">γρήγορες συνταγές</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">ευ ζην</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bar-red">
+                    <div class="container"></div>
+                </div>
+                <div class="hidden-white-block hidden-white-block-3">
+                    <div class="row justify-content-center create-products-row">
+                        <div>
+                            <img class="left-product-btn left-product-btn-header" src="img/left-btn.png">
+                        </div>
+                        <div>
+                            <img class="create-image " src="img/imageedit_2_3618618766.jpg">
+                            <div class="row justify-content-center">
+                                <span class="dropdown__trigger">πέννες αλα κρεμ</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="create-image  mx-4" src="img/shutterstock_663178852.jpg">
+                            <div class="row justify-content-center">
+                                <span class="dropdown__trigger">ζυμαρικά με 4 τυριά</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="create-image " src="img/shutterstock_1074620357.jpg">
+                            <div class="row justify-content-center">
+                                <span class="dropdown__trigger">τορτελίνια τυριού</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="right-product-btn right-product-btn-header" src="img/right-btn.png">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!--end bar-->
+    </div>
+    <div class="main-container">
+        <section class="cover height-100 text-center imagebg parallax" data-overlay="1" style="height:530px;">
+            <div class="background-image-holder">
+                <img class="background-image" alt="background" src="img/shutterstock_1702678807.jpg" />
+            </div>
+            <!--end of container-->
+        </section>
+        <section class="text-center korifai-poiot">
+            <div class="container product-container">
+                <div class="row">
+                    <div class="breadcrumb mb-5">
+                        <a class="breadcrumb-link" href="index.html">
+                            Αρχική
+                        </a>
+                        /
+                        <a class="breadcrumb-link" href="create.html" style="color: #EA002A;">
+                            Δημιουργήστε
+                        </a>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center">
+                    <div class="create-image-wrapper">
+                        <div class="content-overlay">
+                            <div class="hover-card-text">
+                                <div>
+                                    <img class="hover-card-logo" src="img/serve.png" alt="">
+                                    <div class="hover-card-text-title">Απόλαυση στο max</div>
+                                    <div class="hover-card-text-description">lorem ipsum dolor</div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="create-image " src="img/imageedit_2_3618618766.jpg">
+                    </div>
+                    <div class="create-image-wrapper mx-4">
+                        <div class="content-overlay"></div>
+                        <img class="create-image" src="img/imageedit_4_4327218758.jpg">
+                    </div>
+                    <div class="create-image-wrapper">
+                        <div class="content-overlay"></div>
+                        <img class="create-image " src="img/shutterstock_458767672.jpg">
+                    </div>
+
+
+
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+
+
+        <section class="text-center photo-grid" style="margin-top: 25px;border-top: 0;margin-bottom: 60px;">
+            <h1 class="mozza-title">Alpiland δεν είναι μόνο Mozzarella!</h1>
+            <div class="row" style="margin-left:400px;margin-right:400px;padding-bottom: 90px; margin-bottom: 150px;">
+                <div class="col">
+                    <div class="row">
+                        <img src="img/alpiland_cheese&#32;slices_edam_Aug&#32;20_01.png">
+                    </div>
+                    <div class="row justify-content-center">
+                        <span class="cheese-title">Edam Alpiland</span>
+                    </div>
+                    <div class="row justify-content-center">
+                        <span class="cheese-subtitle">Περισσότερα</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <img src="img/alpiland_cheese&#32;slices_saganaki_Aug&#32;20_01.png">
+                    </div>
+                    <div class="row justify-content-center">
+                        <span class="cheese-title">Σαγανάκι Alpiland</span>
+                    </div>
+                    <div class="row justify-content-center">
+                        <span class="cheese-subtitle">Περισσότερα</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <img src="img/alpiland_cheese_slices_emmental_Aug_20_01.png">
+                    </div>
+                    <div class="row justify-content-center">
+                        <span class="cheese-title">Emmental Alpiland</span>
+                    </div>
+                    <div class="row justify-content-center">
+                        <span class="cheese-subtitle">Περισσότερα</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <img src="img/alpiland_cheese&#32;slices_gouda&#32;light_Aug&#32;20_01.png">
+                    </div>
+                    <div class="row justify-content-center">
+                        <span class="cheese-title">Gouda Light Alpiland</span>
+                    </div>
+                    <div class="row justify-content-center">
+                        <span class="cheese-subtitle">Περισσότερα</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="text-center space--sm footer-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading-block">
+                        <ul class="list-inline list--hover">
+                            <li>
+                                <a href="create.html#" class="footer-links">
+                                    <span style="position: relative;top: -76px;left: -144px;">τα προϊόντα μας</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="create.html#" class="footer-links">
+                                    <span style="position: relative;top: -39px;left: -316px;">δημιουργήστε</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="create.html#" class="footer-links">
+                                    <span style="position: relative;top: -76px;left: -235px;">γνωρίστε μας</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="create.html#" class="footer-links">
+                                    <span style="position: relative;top: -39px;left: -387px;">επικοινωνία</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="create.html#" class="footer-links">
+                                    <span style="position: relative;top: -2px;left: -526px;">B2B</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="create.html#" class="footer-links">
+                                    <span style="position: relative;top: -76px;left: 141px;">όροι χρήσης</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="create.html#" class="footer-links">
+                                    <span style="position: relative;top: -39px;left: 4px;">πολιτική cookies</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="create.html#" class="footer-links">
+                                    <span style="position: relative;top: -2px;left: -174px;">GDPR</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="email-input" aria-label="Large" placeholder="email"
+                                        aria-describedby="inputGroup-sizing-sm"
+                                        style="width: 349px;position: relative;left: 367px;top: -45px;height: 55px;z-index: 30;">
+                                </div>
+                                <button type="button" class="btn btn-danger register"
+                                style="position: relative;left: 283px;width: 146px;height: 57px;z-index: 45;top: -46px;border: black 1px;"">Εγγραφή</button>
+                                <img src="img/footer-heart.png"
+                                    style="position: relative;left: 25px;z-index: 45;top: -220px;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div>
+                                <span class="type--fine-print">&copy;
+                                    <span class="update-year"></span> Stack Inc.</span>
+                                <a class="type--fine-print" href="#">Privacy Policy</a>
+                                <a class="type--fine-print" href="#">Legal</a>
+                            </div> -->
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="img/gmo-free.png" class="img-fluid"
+                                        style="position: relative;top: 45px;left: -33px;">
+                                </div>
+                                <div class="col">
+                                    <img src="img/icons-alp.png" class="img-fluid"
+                                        style="position: relative;top: 45px;left: -29px;">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+            <!--end of container-->
+        </footer>
+    </div>
+    <!--<div class="loader"></div>-->
+    <a class="back-to-top inner-link" href="create.html#start" data-scroll-class="100vh:active">
+        <i class="stack-interface stack-up-open-big"></i>
+    </a>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/flickity.min.js"></script>
+    <script src="js/easypiechart.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/ytplayer.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/granim.min.js"></script>
+    <script src="js/jquery.steps.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        $('#our_products').mouseenter(function () {
+            $('.hidden-white-block-1').show();
+            $('.hidden-white-block-2').hide();
+            $('#our_products').css('color', '#EA002A')
+            $('#create').css('color', 'white')
+            $('.bar-white').removeClass('show-2');
+            $('.bar-white').addClass('show');
+        });
+        $('.parallax').mouseenter(function () {
+            $('.hidden-white-block-2').hide();
+            $('#create').css('color', 'white')
+            $('.bar-white').removeClass('show');
+            $('.bar-white').removeClass('show-2');
+            $('.bar-red').removeClass('show');
+            $('.bar-red').hide();
+        });
+        $('.parallax').mouseenter(function () {
+            $('.hidden-white-block-1').hide();
+            $('.hidden-white-block-3').hide();
+            $('.hidden-white-block-4').hide();
+            $('#our_products').css('color', 'white')
+        });
+        $('.hidden-white-block-3').mouseleave(function () {
+            $('.hidden-white-block-3').hide();
+            $('.bar-red').hide();
+        });
+        $('.hidden-white-block-4').mouseleave(function () {
+            $('.hidden-white-block-4').hide();
+            $('.hidden-white-block-1 .bar-red').hide();
+        });
+        $('#create').mouseenter(function () {
+            $('.hidden-white-block-2').show();
+            $('.hidden-white-block-1').hide();
+            $('#create').css('color', '#EA002A')
+            $('#our_products').css('color', 'white')
+            $('.bar-white').removeClass('show');
+            $('.bar-white').addClass('show-2');
+        });
+
+        $('#pleasure').mouseenter(function () {
+            $('.hidden-white-block-3').show();
+            $('.bar-red').show();
+            $('.bar-red').addClass('show');
+        });
+
+        $('#cheese').mouseenter(function () {
+            $('.hidden-white-block-4').show();
+            $('.bar-red').show();
+            $('.bar-red').addClass('show');
+        });
+
+        $('.hidden-white-block-2 .bar-red').mouseenter(function () {
+            $('.hidden-white-block-3').show();
+            $('.hidden-white-block-2 .bar-red').show();
+            $('.hidden-white-block-2 .bar-red').addClass('show');
+        });
+
+        $('.hidden-white-block-1 .bar-red').mouseenter(function () {
+            $('.hidden-white-block-4').show();
+            $('.hidden-white-block-1 .bar-red').show();
+            $(' .hidden-white-block-1 .bar-red').addClass('show');
+        });
+
+
+
+        $('.right-product-btn').on({
+            "mouseover": function () {
+                this.src = 'img/right-btn-red.png';
+            },
+            "mouseout": function () {
+                this.src = 'img/right-btn.png';
+            }
+        });
+        $('.left-product-btn').on({
+            "mouseover": function () {
+                this.src = 'img/left-btn-red.png';
+            },
+            "mouseout": function () {
+                this.src = 'img/left-btn.png';
+            }
+        });
+        $('.cheese-item').on({
+            "mouseover": function () {
+                this.src = 'img/cheese-red.png';
+                $('.cheese-text h3').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                this.src = 'img/cheese.png';
+                $('.cheese-text h3').css('color', '#192956')
+            }
+        });
+        $('.milk-item').on({
+            "mouseover": function () {
+                this.src = 'img/milk-red.png';
+                $('.milk-text h3').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                this.src = 'img/milk.png';
+                $('.milk-text h3').css('color', '#192956')
+            }
+        });
+        $('.delicatessen-item').on({
+            "mouseover": function () {
+                this.src = 'img/award-red.png';
+                $('.delicatessen-text h3').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                this.src = 'img/award.png';
+                $('.delicatessen-text h3').css('color', '#192956')
+            }
+        });
+        $('.right-product-btn').click(function () {
+            console.log('ok')
+        });
+    </script>
+    <script>
+        $('#mozzarella-img').on({
+            "mouseover": function () {
+                $('#mozzarella-link').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                $('#mozzarella-link').css('color', '#192956')
+            }
+        });
+        $('#gouda-img').on({
+            "mouseover": function () {
+                $('#gouda-link').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                $('#gouda-link').css('color', '#192956')
+            }
+        });
+    </script>
+</body>
+
+</html>

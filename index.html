@@ -1,0 +1,2059 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Alpiland Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <meta name="description" content="Site Description Here">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/font-rubiklato.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700%7CRubik:300,400,500" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/footer-heart.png">
+    <style>
+        .alpi-logo {
+            position: relative;
+            top: -91px;
+            max-width: 278px;
+            right: 59px;
+            z-index: 999;
+        }
+        
+        .heart-logo {
+            top: -91px;
+            max-width: 278px;
+            right: 59px;
+            z-index: 999;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .second-left {
+            left: 111px;
+        }
+
+        .first-right {
+            right: 111px;
+        }
+
+        .cheese-not-selected {
+            opacity: 0.5;
+        }
+
+        .header-row {
+            max-height: 100px;
+        }
+
+        .header-col {
+            max-height: 100px;
+        }
+
+        .create-image {
+            width: 420px;
+            height: auto;
+        }
+
+        .learn-more {
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: #00205C;
+            color: white;
+            border: 0.1px !important;
+            border-radius: 4.5px;
+            outline: none !important;
+            width: 217px;
+            height: 52px;
+        }
+
+        .learn-more:focus,
+        .learn-more:hover {
+            background-color: #EA002A;
+            outline: none !important;
+        }
+
+        .blue-icons {
+            margin-top: 105px
+        }
+
+        footer {
+            margin-top: 100px;
+            background-image: url(img/alpiland_milk_Feb_20_F_larger-shadow.png);
+            background-size: contain;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        .alpi-gallery {
+            padding-right: 0px;
+            padding-left: 0px;
+            max-height: 470px;
+        }
+
+        .photo-grid {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .dropdown__container {
+            position: absolute;
+            top: 20px;
+            left: -80px;
+            z-index: 15 !important;
+            max-width: 1920px;
+            left: -97px !important;
+        }
+
+        @font-face {
+            font-family: "Roboto Slab Bold";
+            src: url("fonts/RobotoSlab-Bold.ttf");
+        }
+
+        @font-face {
+            font-family: "Roboto Slab Regular";
+            src: url("fonts/RobotoSlab-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "Roboto Slab Regular Condensed";
+            src: url("fonts/RobotoCondensed-Regular.ttf");
+        }
+
+        .blog-txt {
+            font-family: 'Roboto Slab Regular', Arial, sans-serif;
+            font-size: 48px;
+            color: white;
+        }
+
+        .learn-more-text {
+            font-family: 'Roboto Slab Regular', Arial, sans-serif;
+            font-size: 18px;
+            color: white;
+            font-weight: 100 !important;
+        }
+
+        .learn-more-text:hover {
+            font-family: 'Roboto Slab Regular', Arial, sans-serif;
+            font-size: 18px;
+            color: white;
+            font-weight: 100 !important;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 60pt;
+        }
+
+        .h1 {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 35pt;
+            color: #00205C;
+            margin-bottom: 20px !important;
+        }
+
+        .contact-us-title {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 50pt;
+            color: #00205C;
+            margin-bottom: 20px !important;
+        }
+
+        .text-prod {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 22px;
+            color: #00205C;
+            margin-bottom: 0px;
+        }
+
+        .type-prod {
+            font-family: 'Roboto Slab Regular', Arial, sans-serif !important;
+            font-size: 20px;
+            color: #00205C;
+            margin-bottom: 20px !important;
+        }
+
+        .type-prod-btn {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif !important;
+            font-size: 22px;
+            color: #00205C;
+            margin-bottom: 80px;
+        }
+
+        .footer-links {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 14pt;
+            color: #00205C !important;
+            margin-bottom: 20px !important;
+        }
+
+        .bar-white {
+            width: 100%;
+            height: 11px;
+            background-color: white;
+            position: absolute;
+            top: 174.5px;
+            z-index: 14;
+            box-shadow: 0px 0px 20px 10px rgb(126, 125, 125);
+        }
+
+
+
+        .bar-white::after {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 16%;
+            width: 0;
+            height: 0;
+            border-top: solid 10px #ffffff;
+            border-left: solid 13px transparent;
+            border-right: solid 13px transparent;
+        }
+
+        .bar-white::before {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 30.5%;
+            width: 0;
+            height: 0;
+            border-top: solid 10px #ffffff;
+            border-left: solid 13px transparent;
+            border-right: solid 13px transparent;
+            /* box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5); */
+        }
+
+        .bar-white.show::after {
+            display: block;
+        }
+
+        .bar-white.show-2::before {
+            display: block;
+        }
+
+        .bar-red {
+            display: none;
+            width: 100%;
+            height: 11px;
+            position: absolute;
+            top: 100%;
+            background-color: #EA002A;
+            z-index: 14;
+            /* box-shadow: 0 8px 10px 0 rgb(126, 125, 125); */
+        }
+
+        .bar-red::after {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 49%;
+            width: 0;
+            height: 0;
+            border-top: solid 20px #EA002A;
+            border-left: solid 20px transparent;
+            border-right: solid 20px transparent;
+        }
+
+        .bar-red.show::after {
+            display: block;
+        }
+
+
+        .hidden-white-block {
+            display: none;
+            height: 210px;
+            background: white;
+            position: absolute;
+            top: 185.5px;
+            z-index: 13;
+            width: 100%;
+        }
+
+        .hidden-white-block .container {
+                margin-top: 30px;
+        }
+        /* @media screen and (max-height: 1200px) {
+            .hidden-white-block {
+                height: 210px;
+            }
+
+            .hidden-white-block .container {
+                margin-top: 30px;
+            }
+        } */
+
+        @media screen and (max-width: 1930px) {
+            .img-carousel {
+                max-width: 1920px !important;
+            }
+        }
+
+        @media screen 
+            and (min-device-width: 1200px) 
+            and (max-device-width: 1600px) 
+            and (-webkit-min-device-pixel-ratio: 1) { 
+                .second-left{
+                    left: 167px;
+                }
+                .first-left{
+                    left: 110px;;
+                }
+                .create-image {
+                    width: 100%;
+                    max-width: 207px;
+                    height: auto;
+                }
+                .create-products-row {
+                    margin-top: 30px!important;
+                }
+                .left-product-btn-header{
+                    margin-right: 20px!important;
+                }
+                .right-product-btn-header {
+                    margin-left: 20px!important;
+                }
+                .alpi-logo {
+                    max-width: 205px;
+                    right: 25px;
+                    top: -62px;
+                }
+                .bar{
+                    margin-top:100px;
+                }
+                .bar-white{
+                    top: 134px;;
+                }
+                .hidden-white-block{
+                    top: 146px;
+                }
+                .first-right{
+                   right: 167px; 
+                }
+                .second-right{
+                    right: 110px;
+                }
+                .bar-white:before{
+                    left: 25.5%;
+                }
+                .bar-white:after{
+                    left: 8%;
+                }
+                .left-cheese-btn-header{
+                    width: 80%;
+                }
+                .right-cheese-btn-header{
+                    width: 80%;
+                }
+                .header-cheese-img {
+                    width: 155px!important;
+                }
+                .cheese-subtext{
+                    font-size: 17px!important;
+                }
+                .first-slider-left{
+                    margin-top: 160px;margin-left:0px!important;
+                }
+                .img-carousel {
+                    max-width: 100%!important;
+                }
+                .hidden-white-block-3 {
+                    height: 300px!important;
+                }
+                .first-slider-right{
+                    margin-top: 160px;margin-right:0px!important;
+                }
+                .circular-logos-sides{
+                    margin-top: 195px;
+                }
+            }
+
+        .hidden-white-block-3 {
+            height: 530px;
+            top: 221px;
+            /* box-shadow: 0px 0px 20px 10px rgb(126, 125, 125); */
+        }
+
+        .hidden-white-block-4 {
+            height: 255px;
+            top: 221px;
+            /* box-shadow: 0px 0px 20px 10px rgb(126, 125, 125); */
+        }
+
+        .hidden-white-block-2 {
+            opacity: 100%;
+        }
+
+        .hidden-white-block-1 {
+            opacity: 100%;
+        }
+
+
+        body.main-cursor,
+        body.main-cursor a:hover,
+        body.main-cursor * {
+            cursor: url("img/cursor-heart.png"), auto !important;
+        }
+
+        .carousel-1 {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .carousel-title {
+            font-size: 50pt;
+        }
+
+        .carousel-text {
+            font-size: 20px;
+            font-family: 'Roboto Slab Regular Condensed';
+            color: #00205C;
+        }
+
+        .flickity-page-dots .dot {
+            width: 16px;
+            height: 16px;
+            background-color: #ffffff;
+            opacity: 1;
+        }
+
+        .flickity-viewport {
+            height: 810.5px !important;
+        }
+
+        .flickity-viewport-home {
+            height: 100vh !important;
+        }
+
+        .carousel-image-text {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 800px;
+        }
+
+        .carousel-image-text-home {
+            position: absolute;
+            top: 35%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 800px;
+        }
+
+        .flickity-page-dots {
+            top: 90%;
+            height: 10px;
+        }
+
+
+        .carousel-container {
+            height: 785px;
+        }
+
+        .products-items-container {
+            width: 800px;
+        }
+
+        .dropdown__trigger {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 20px;
+            color: #00205C;
+        }
+
+        .dropdown__trigger:hover {
+            color: #EA002A !important;
+        }
+
+        .korifai-poiot {
+            padding-top: 55px;
+            padding-bottom: 5em !important;
+        }
+
+        .fb-contact:hover {
+            opacity: 0.5;
+        }
+
+        .blog-img:hover {
+            opacity: 0.5;
+        }
+
+        .someicon {
+            display: none;
+        }
+
+        .product-container {
+            max-width: 1920px !important;
+        }
+
+        .product-div {
+            max-width: 192;
+        }
+
+        .product-col {
+            width: 350px !important;
+            height: 350px !important;
+        }
+
+        .email-input {
+            border-color: black !important;
+            ;
+        }
+
+        .circular-logos {
+            margin-top: 104px;
+        }
+
+        .circular-logos-sides {
+            margin-top: 155px;
+        }
+
+        .email-input::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: black !important;
+            ;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        .carousel-main-title {
+            font-family: 'Roboto Slab Bold', Arial, sans-serif;
+            font-size: 70px;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .create-products-row {
+            margin-top: 30px;
+        }
+
+        .cheese-row {
+            margin-top: 30px;
+        }
+
+        .cheese-container {
+            width: 90%;
+        }
+
+        .left-product-btn-header {
+            margin-top: 110px;
+            margin-right: 200px;
+        }
+
+        .right-product-btn-header {
+            margin-top: 110px;
+            margin-left: 200px;
+        }
+
+        .left-cheese-btn-header {
+            margin-top: 72px;
+        }
+
+        .right-cheese-btn-header {
+            margin-top: 72px;
+        }
+
+        .left-horizontal {
+            position: relative;
+            left: 123px;
+        }
+
+        .header-cheese-img {
+            width: 180px;
+            height: auto;
+            margin-bottom: 0;
+        }
+
+        .header-link {
+            color: #fff
+        }
+
+        .register {
+            background-color: #EA002A;
+        }
+
+        .register:hover {
+            transform: translate3d(0, 0px, 0);
+            -webkit-transform: translate3d(0, 0px, 0);
+            background-color: #00205C !important;
+        }
+
+        .sticky {
+            position: fixed;
+            margin-top: 0;
+        }
+
+        .sticky-white-bar{
+            position: fixed;
+            top:35px;
+        }
+        
+        .sticky-hidden-block{
+            position: fixed;
+            top:30px;
+        }
+
+        .sticky-hidden-block-after{
+            top: 221px;
+        }
+        .first-slider-left{
+            margin-top: 160px;margin-left:300px;
+        }
+        .first-slider-right{
+            margin-top: 160px;margin-right:300px;
+        }
+        #next-arrow-slider{
+            z-index: 9999;
+            position: relative;
+            float: right;
+            top: -335px;
+            left: 50px;
+        }
+        #prev-arrow-slider{
+            z-index: 9999;
+            position: relative;
+            float: left;
+            top: 140px;
+            right: 50px;
+        }
+        .quality-slider{
+            max-width: 1184px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .slider-quality-photo{
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body class="main-cursor">
+    <div class="someicon"><img src="img/alpiland_heart_stroked.shadow.png"></img></div>
+    <a id="start"></a>
+    <div class="nav-container ">
+        <div class="bar bar--sm visible-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-md-2">
+                        <a href="index.html">
+                            <img class="logo logo-dark" alt="logo" src="https://dev-alpiland-demo-28uus.ondigitalocean.app/img/logo-dark.png" />
+                            <img class="logo logo-light" alt="logo" src="img/logo_alpiland_PANTONE_Feb_20_F222.png" />
+                        </a>
+                    </div>
+                    <div class="col-9 col-md-10 text-right">
+                        <a href="index.html#" class="hamburger-toggle" data-toggle-class="#menu2;hidden-xs hidden-sm">
+                            <i class="icon icon--sm stack-interface stack-menu"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--DISCORD TEST-->
+            <!--end of container-->
+        </div>
+        <!--end bar-->
+        <nav id="menu2" class="bar bar-2 hidden-xs bar--transparent bar--absolute" style="width: 100%;height: 35px;">
+            <div class="container">
+                <div class="row header-row">
+                    <div class="col-lg-2 header-col text-center text-left-sm hidden-xs order-lg-2">
+                        <div class="bar__module">
+                            <a href="index.html">
+                                <img class="logo logo-dark" alt="logo" src="https://dev-alpiland-demo-28uus.ondigitalocean.app/img/logo-dark.png" />
+                                <img id="a-logo" class=" logo-light alpi-logo" alt="logo" src="img/278-200-alpiland.png" />
+                                <img id="h-logo" class=" logo-light heart-logo" alt="logo" src="img/footer-heart.png" />
+                            </a>
+                        </div>
+                        <!--end module-->
+                    </div>
+                    <div class="col-lg-5 order-lg-1 header-col" style="top: -7px;">
+                        <div class="bar__module">
+                            <ul class="menu-horizontal text-left">
+                                <li class="dropdown first-left">
+                                    <span id="our_products" class="dropdown__trigger header-link">τα προϊόντα μας</span>
+                                </li>
+                                <li class="dropdown second-left">
+                                    <a href="create.html"><span id="create"
+                                            class="dropdown__trigger header-link">δημιουργήστε</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 header-col text-right text-left-xs text-left-sm order-lg-3" style="top: -7px;">
+                        <div class="bar__module">
+                            <ul class="menu-horizontal left-horizontal text-left">
+                                <li class="dropdown first-right">
+                                    <span class="dropdown__trigger header-link">γνωρίστε μας</span>
+                                </li>
+                                <li class="dropdown second-right">
+                                    <span class="dropdown__trigger header-link">επικοινωνία</span>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="dropdown__content col-lg-2 col-md-4">
+                                                    <ul class="menu-vertical">
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">About</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="dropdown__content col-lg-2">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-about-company.html">
+                                                                                        About Company
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-about-team.html">
+                                                                                        About Team
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-about-me.html">
+                                                                                        About Me
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-about-history.html">
+                                                                                        About History
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Careers</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-careers.html">
+                                                                                        Careers Listing
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-careers-single.html">
+                                                                                        Career Single
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Contact</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-map-1.html">
+                                                                                        Contact Map 1
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-map-2.html">
+                                                                                        Contact Map 2
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-map-3.html">
+                                                                                        Contact Map 3
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-map-4.html">
+                                                                                        Contact Map 4
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-planner-1.html">
+                                                                                        Contact Planner 1
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-contact-planner-2.html">
+                                                                                        Contact Planner 2
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Pricing</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-pricing-1.html">
+                                                                                        Pricing Plans 1
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-pricing-2.html">
+                                                                                        Pricing Plans 2
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-pricing-3.html">
+                                                                                        Pricing Plans 3
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Services</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-services-1.html">
+                                                                                        Services 1
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-services-2.html">
+                                                                                        Services 2
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-services-3.html">
+                                                                                        Services 3
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown separate">
+                                                            <span class="dropdown__trigger">Accounts</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-profile.html">
+                                                                                        Public Profile
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-settings.html">
+                                                                                        Account Settings
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-login-1.html">
+                                                                                        Login Simple
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-login-2.html">
+                                                                                        Login Social
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-create-1.html">
+                                                                                        Create Simple
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-create-2.html">
+                                                                                        Create Social
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-accounts-recover.html">
+                                                                                        Recover Account
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <span class="dropdown__trigger">Utilities</span>
+                                                            <div class="dropdown__container">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div
+                                                                            class="dropdown__content col-lg-2 col-md-4">
+                                                                            <ul class="menu-vertical">
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-conversation.html">
+                                                                                        Conversation
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="404.html">
+                                                                                        Error 404
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="https://dev-alpiland-demo-28uus.ondigitalocean.app/500.html">
+                                                                                        Error 500
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-maintnence.html">
+                                                                                        Maintnence Mode
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-onboarding.html">
+                                                                                        Onboarding
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-search-results-list.html">
+                                                                                        Search Results List
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="https://dev-alpiland-demo-28uus.ondigitalocean.app/page-utility-search-results.html">
+                                                                                        Search Results Boxes
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--end dropdown content-->
+                                                                    </div>
+                                                                    <!--end row-->
+                                                                </div>
+                                                            </div>
+                                                            <!--end dropdown container-->
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!--end dropdown content-->
+                                            </div>
+                                            <!--end row-->
+                                        </div>
+                                    </div>
+                                    <!--end dropdown container-->
+                                </li>
+                            </ul>
+                        </div>
+                        <!--end module-->
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </nav>
+        <div id="bar-w" class="bar-white">
+            <div class="container"></div>
+        </div>
+
+        <div id="block1" class="hidden-white-block-1 hidden-white-block">
+            <div class="row justify-content-center h-100">
+                <div class="d-flex align-items-center h-100">
+                    <div class="container">
+                        <div class="row products-items-container align-items-center" style="margin-top: 20px;">
+                            <div class="col-md-4">
+                                <div class="row justify-content-center cheese-hover">
+                                    <img src="img/cheese-icon.png" alt="logo">
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 ">
+                                <div class="row justify-content-center">
+                                    <img src="img/milk-icon.png" alt="logo">
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row justify-content-center">
+                                    <img src="img/award-icon.png" alt="logo">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row products-items-container align-items-center mt-3">
+                            <div class="col-md-4">
+
+                                <div class="row justify-content-center">
+                                    <a id="cheese" class="dropdown__trigger cheese-hover" href="cheese.html"
+                                        style="text-decoration: none;">τυριά Alpiland</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 ">
+
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">γάλα-ροφήματα Alpiland</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">delicatessen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bar-red">
+                    <div class="container"></div>
+                </div>
+                <div id="block4" class="hidden-white-block hidden-white-block-4">
+                    <div class="row justify-content-center cheese-row">
+                        <div class="row justify-content-around cheese-container">
+                            <div>
+                                <img class="left-product-btn left-cheese-btn-header" src="img/left-btn.png">
+                            </div>
+                            <div class="">
+                                <img class="header-cheese-img" src="img/edam-alpiland-fetes.png" alt="" id="edam-img" />
+                                <div class="row justify-content-center">
+                                    <a class="dropdown__trigger cheese-subtext" href="index.html" style="text-decoration: none;"
+                                        id="edam-link">Edam Alpiland</a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <img class="header-cheese-img" src="img/emmental-alpiland-fetes.png" alt=""
+                                    id="emmental-img" />
+                                <div class="row justify-content-center">
+                                    <a class="dropdown__trigger cheese-subtext" href="index.html" style="text-decoration: none;"
+                                        id="emmental-link">Emmental Alpiland</a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <a href="gouda.html"><img class="header-cheese-img" src="img/gouda-alpiland-fetes.png"
+                                        alt="" id="gouda-img" /></a>
+                                <div class="row justify-content-center">
+                                    <a class="dropdown__trigger cheese-subtext" href="gouda.html" style="text-decoration: none;"
+                                        id="gouda-link">Gouda Alpiland</a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <a href="cheese.html"><img class="header-cheese-img"
+                                        src="img/mozzarella-fetes-alpiland.png" id="mozzarella-img" alt="" /></a>
+                                <div class="row justify-content-center">
+                                    <a class="dropdown__trigger cheese-subtext" href="cheese.html" id="mozzarella-link"
+                                        style="text-decoration: none;">Mozzarella Alpiland</a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <img class="header-cheese-img" src="img/saganaki-alpiland.png" alt=""
+                                    id="saganaki-img" />
+                                <div class="row justify-content-center">
+                                    <a class="dropdown__trigger cheese-subtext" href="index.html" id="saganaki-link"
+                                        style="text-decoration: none;">Σαγανάκι Alpiland</a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <img class="header-cheese-img" src="img/kefalotyri-trimmeno-alpiland.png" alt=""
+                                    id="kefaloturi-img" />
+                                <div class="row justify-content-center">
+                                    <a class="dropdown__trigger cheese-subtext" href="index.html" id="kefaloturi-link"
+                                        style="text-decoration: none;">Κεφαλοτύρι Alpiland</a>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="right-product-btn right-cheese-btn-header" src="img/right-btn.png">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="block2" class="hidden-white-block-2 hidden-white-block">
+            <div class="row justify-content-center h-100">
+                <div class="d-flex align-items-center h-100">
+                    <div class="container">
+                        <div class="row products-items-container align-items-center" style="margin-top: 20px;">
+                            <div class="col-md-4">
+                                <div class="row justify-content-center pleasure">
+                                    <img src="img/serve.png" alt="logo">
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 ">
+                                <div class="row justify-content-center">
+                                    <img src="img/cook.png" alt="logo">
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row justify-content-center">
+                                    <img src="img/salad.png" alt="logo">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row products-items-container align-items-center mt-3">
+                            <div class="col-md-4">
+
+                                <div class="row justify-content-center">
+                                    <span id="pleasure" class="dropdown__trigger pleasure">απόλαυση στο max</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 ">
+
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">γρήγορες συνταγές</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+
+                                <div class="row justify-content-center">
+                                    <span class="dropdown__trigger">ευ ζην</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bar-red">
+                    <div class="container"></div>
+                </div>
+                <div id="block3" class="hidden-white-block hidden-white-block-3">
+                    <div class="row justify-content-center create-products-row">
+                        <div>
+                            <img class="left-product-btn left-product-btn-header" src="img/left-btn.png">
+                        </div>
+                        <div>
+                            <img class="create-image " src="img/imageedit_2_3618618766.jpg">
+                            <div class="row justify-content-center">
+                                <span class="dropdown__trigger">πέννες αλα κρεμ</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="create-image  mx-4" src="img/shutterstock_663178852.jpg">
+                            <div class="row justify-content-center">
+                                <span class="dropdown__trigger">ζυμαρικά με 4 τυριά</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="create-image " src="img/shutterstock_1074620357.jpg">
+                            <div class="row justify-content-center">
+                                <span class="dropdown__trigger">τορτελίνια τυριού</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="right-product-btn right-product-btn-header" src="img/right-btn.png">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!--end bar-->
+    </div>
+    <div class="main-container">
+        <section class="text-center bg--secondary carousel-1" style="height: 100vh;">
+            <div class="row">
+                <div class="col-12 carousel-container">
+                    <div class="slider" data-paging="true">
+                        <ul class="slides" style="
+                        height: 100vh;
+                    ">
+                            <li>
+                                <div class="testimonial home">
+                                    <img class="img-carousel" alt="Image" src="img/homeslider-1.jpg" />
+                                    <div class="carousel-image-text-home">
+                                        <div class="h1 carousel-main-title"
+                                            style="color: #ffffff; position: relative; top: 1px; left: -17px;line-height: 1;">
+                                            Ιστορία και παράδοση<br>πάνω από έναν αιώνα
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonial">
+                                    <img class="img-carousel" alt="Image" src="img/homeslider-2.jpg" />
+                                    <div class="carousel-image-text-home">
+                                        <div class="h1 carousel-main-title"
+                                            style="color: #ffffff; position: relative; top: 1px; left: -17px;line-height: 1;">
+                                            Ιστορία και παράδοση<br>πάνω από έναν αιώνα
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonial">
+                                    <img class="img-carousel" alt="Image" src="img/homeslider-3.jpg" />
+                                    <div class="carousel-image-text-home">
+                                        <div class="h1 carousel-main-title"
+                                            style="color: #ffffff; position: relative; top: 1px; left: -17px;line-height: 1;">
+                                            Ιστορία και παράδοση<br>πάνω από έναν αιώνα
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+            <!--end of container-->
+        </section>
+
+        <section class="text-center korifai-poiot">
+            <div class="container product-container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-12">
+                        <p class="h1">κορυφαία ποιότητα, προσιτή σε όλους</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="quality-slider">
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/emmental-block-alpiland.png" />
+                            <p class="text-prod cheese-not-selected">Emmental Alpiland</p>
+                            <p class="type-prod cheese-not-selected">block</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="cheese.html">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/emmental-alpiland-fetes.png" />
+                            <p class="text-prod cheese-not-selected">Emmental Alpiland</p>
+                            <p class="type-prod cheese-not-selected">φέτες</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="cheese.html">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid slider-quality-photo" alt="logo" src="img/kefalotyri-trimmeno-alpiland.png" />
+                            <p class="text-prod">Κεφαλοτύρι Alpiland</p>
+                            <p class="type-prod">τριμμένο</p>
+                            <button type="button" class="learn-more text-center"><a class="learn-more-text" href="cheese.html">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/freskia-mozzarella.png" />
+                            <p class="text-prod cheese-not-selected">Mozzarella Alpiland</p>
+                            <p class="type-prod cheese-not-selected">φρέσκια</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="cheese.html">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/edam-alpiland-fetes.png"/>
+                            <p class="text-prod cheese-not-selected">Edam Alpiland</p>
+                            <p class="type-prod cheese-not-selected">φέτες</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="index.html#">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/edam-block-alpiland.png"/>
+                            <p class="text-prod cheese-not-selected">Edam Alpiland</p>
+                            <p class="type-prod cheese-not-selected">block</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="index.html#">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/saganaki-alpiland.png"/>
+                            <p class="text-prod cheese-not-selected">Σαγανάκι Alpiland</p>
+                            <p class="type-prod cheese-not-selected">μερίδες</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="index.html#">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/gouda-alpiland-fetes.png"/>
+                            <p class="text-prod cheese-not-selected">Gouda Alpiland</p>
+                            <p class="type-prod cheese-not-selected">φέτες</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="index.html#">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/gouda-light-fetes-alpiland.png"/>
+                            <p class="text-prod cheese-not-selected">Gouda Light Alpiland</p>
+                            <p class="type-prod cheese-not-selected">φέτες</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="index.html#">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/gouda-smoked-alpiland.png"/>
+                            <p class="text-prod cheese-not-selected">Gouda καπνιστή Alpiland</p>
+                            <p class="type-prod cheese-not-selected">φέτες</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="index.html#">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/kefalotyri-l-roda-alpiland.png"/>
+                            <p class="text-prod cheese-not-selected">Κεφαλοτύρι light Alpiland</p>
+                            <p class="type-prod cheese-not-selected">ρόδα</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="index.html#">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/kefalotyri-roda-alpiland.png"/>
+                            <p class="text-prod cheese-not-selected">Κεφαλοτύρι Alpiland</p>
+                            <p class="type-prod cheese-not-selected">ρόδα</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="index.html#">Δες περισσότερα</a></button>
+                        </div>
+                        <div>
+                            <img class="img-fluid cheese-not-selected slider-quality-photo" alt="logo" src="img/mozzarella-trimmenh-alpiland.png"/>
+                            <p class="text-prod cheese-not-selected">Mozzarella Alpiland</p>
+                            <p class="type-prod cheese-not-selected">τριμμένη</p>
+                            <button type="button" class="learn-more text-center invisible"><a class="learn-more-text" href="index.html#">Δες περισσότερα</a></button>
+                        </div>
+                    </div>
+                    <div class="logos-circles">
+                        <div class="row mx-auto circular-logos-sides">
+                            <div class="row mx-auto">
+                                <div class="col" style="position: relative;left: -95px;">
+                                    <img class="img-fluid cheese-item" alt="logo" src="img/cheese.png" style="width:148px;height:148px;" />
+                                    <div class="cheese-text">
+                                        <h3 class="type-prod-btn" style="margin-top: 30px;white-space: nowrap;">τυριά Alpiland</h3>
+                                    </div>
+                                </div>
+                                <div class="col" style="position: relative;left: 20px;">
+                                    <img class="img-fluid milk-item" alt="logo" src="img/milk.png" style="width:148px;height:148px;" />
+                                    <div class="milk-text">
+                                        <h3 class="type-prod-btn" style="margin-top: 30px;white-space: nowrap;">γάλα-ροφήματα Alpiland</h3>
+                                    </div>
+                                </div>
+                                <div class="col" style="position: relative;right: -140px;">
+                                    <img class="img-fluid delicatessen-item" alt="logo" src="img/award.png" style="width:148px;height:148px;" />
+                                    <div class="delicatessen-text">
+                                        <h3 class="type-prod-btn" style="margin-top: 30px;white-space: nowrap;">delicatessen</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="d-flex justify-content-center blue-icons">
+                    <div class="col" style="margin-left: 339px;margin-right: 133px;">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid cheese-item" alt="logo" src="img/cheese.png"
+                                    style="width:148px;height:148px;" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col cheese-text">
+                                <h3 class="type-prod-btn" style="margin-top: 30px;">τυριά Alpiland</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="margin-left: -249px;">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid milk-item" alt="logo" src="img/milk.png"
+                                    style="width:148px;height:148px;" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col milk-text">
+                                <h3 class="type-prod-btn" style="margin-top: 30px;">γάλα-ροφήματα Alpiland</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="
+                            margin-right: 300px;
+                            margin-left: -100px;
+                        ">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid delicatessen-item" alt="logo" src="img/award.png"
+                                    style="width:148px;height:148px;" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col delicatessen-text">
+                                <h3 class="type-prod-btn" style="margin-top: 30px;">delicatessen</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+
+        <section class="text-center bg--secondary carousel-1">
+            <div class="row">
+                <div class="col-12 carousel-container">
+                    <div class="slider" data-paging="true">
+                        <ul class="slides">
+                            <li>
+                                <div class="testimonial">
+                                    <img class="img-carousel" alt="Image" src="img/slider-Alpiland-pasta.jpg" />
+                                    <div class="carousel-image-text">
+                                        <div class="h1 carousel-main-title"
+                                            style="color: #00205C; position: relative; top: -37px; left: -17px;">
+                                            Απόλαυση στο max
+                                        </div>
+                                        <div class="carousel-text centered"
+                                            style="color: #00205C;position: relative; top: -47px; left: 0px;">Intent
+                                            labo. Fuga.
+                                            Nequatem qui ius aut aut volor aut quae.<br>
+                                            Porestrum quatemquas pario doluptis ipid essit etumquos dolore
+                                            nulparuptat.<br>
+                                            Puda que non con conet quodit maxim eati dollabor aut ad etur si officie
+                                            ndaecup taquae.
+                                        </div>
+                                        <button type="button" class="learn-more text-center mt-4"
+                                            style="position: relative; top: -48px;"><a class="learn-more-text">Δες
+                                                περισσότερα</a></button>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonial">
+                                    <img class="img-carousel" alt="Image" src="img/slider-alpiland-pizza.jpg" />
+                                    <div class="carousel-image-text">
+                                        <div class="h1 carousel-main-title"
+                                            style="color: white; position: relative; top: -37px; left: -17px;">
+                                            Απόλαυση στο max
+                                        </div>
+                                        <div class="carousel-text centered"
+                                            style="color: white;position: relative; top: -47px; left: 0px;">Intent labo.
+                                            Fuga.
+                                            Nequatem qui ius aut aut volor aut quae.<br>
+                                            Porestrum quatemquas pario doluptis ipid essit etumquos dolore
+                                            nulparuptat.<br>
+                                            Puda que non con conet quodit maxim eati dollabor aut ad etur si officie
+                                            ndaecup taquae.
+                                        </div>
+                                        <button type="button" class="learn-more text-center mt-4"
+                                            style="position: relative; top: -48px;"><a class="learn-more-text">Δες
+                                                περισσότερα</a></button>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonial">
+                                    <img class="img-carousel" alt="Image" src="img/slider-alpiland-toast.jpg" />
+                                    <div class="carousel-image-text">
+                                        <div class="h1 carousel-main-title"
+                                            style="color: white; position: relative; top: -37px; left: -17px;">
+                                            Απόλαυση στο max
+                                        </div>
+                                        <div class="carousel-text centered"
+                                            style="color: white;position: relative; top: -47px; left: 0px;">Intent labo.
+                                            Fuga.
+                                            Nequatem qui ius aut aut volor aut quae.<br>
+                                            Porestrum quatemquas pario doluptis ipid essit etumquos dolore
+                                            nulparuptat.<br>
+                                            Puda que non con conet quodit maxim eati dollabor aut ad etur si officie
+                                            ndaecup taquae.
+                                        </div>
+                                        <button type="button" class="learn-more text-center mt-4"
+                                            style="position: relative; top: -48px;"><a class="learn-more-text">Δες
+                                                περισσότερα</a></button>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+            <!--end of container-->
+        </section>
+
+        <section class="text-center bg--secondary carousel-1">
+            <div class="row">
+                <div class="col-12 carousel-container">
+                    <div class="slider" data-paging="true">
+                        <ul class="slides">
+                            <li>
+                                <div class="testimonial">
+                                    <img class="img-carousel" alt="Image" src="img/slider-alpiland-cows.jpg" />
+                                    <div class="carousel-image-text">
+                                        <div class="h1 carousel-main-title"
+                                            style="color: white; position: relative; top: -37px; left: -17px;">
+                                            Μυστικό μας: το γάλα μας!
+                                        </div>
+                                        <div class="carousel-text centered"
+                                            style="color: white;position: relative; top: -47px; left: 0px;">Intent labo.
+                                            Fuga.
+                                            Nequatem qui ius aut aut volor aut quae.<br>
+                                            Porestrum quatemquas pario doluptis ipid essit etumquos dolore
+                                            nulparuptat.<br>
+                                            Puda que non con conet quodit maxim eati dollabor aut ad etur si officie
+                                            ndaecup taquae.
+                                        </div>
+                                        <button type="button" class="learn-more text-center mt-4"
+                                            style="position: relative; top: -48px;"><a class="learn-more-text">Δες
+                                                περισσότερα</a></button>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonial">
+                                    <img class="img-carousel" alt="Image" src="img/slider-home-sample3.jpg" />
+                                    <div class="carousel-image-text">
+                                        <div class="h1 carousel-main-title"
+                                            style="color: white; position: relative; top: -37px; left: -17px;">
+                                            Μυστικό μας: το γάλα μας!
+                                        </div>
+                                        <div class="carousel-text centered"
+                                            style="color: white;position: relative; top: -47px; left: 0px;">Intent labo.
+                                            Fuga.
+                                            Nequatem qui ius aut aut volor aut quae.<br>
+                                            Porestrum quatemquas pario doluptis ipid essit etumquos dolore
+                                            nulparuptat.<br>
+                                            Puda que non con conet quodit maxim eati dollabor aut ad etur si officie
+                                            ndaecup taquae.
+                                        </div>
+                                        <button type="button" class="learn-more text-center mt-4"
+                                            style="position: relative; top: -48px;"><a class="learn-more-text">Δες
+                                                περισσότερα</a></button>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonial">
+                                    <img class="img-carousel" alt="Image" src="img/slider-home-sample2.jpg" />
+                                    <div class="carousel-image-text">
+                                        <div class="h1 carousel-main-title"
+                                            style="color: white; position: relative; top: -37px; left: -17px;">
+                                            Μυστικό μας: το γάλα μας!
+                                        </div>
+                                        <div class="carousel-text centered"
+                                            style="color: white;position: relative; top: -47px; left: 0px;">Intent labo.
+                                            Fuga.
+                                            Nequatem qui ius aut aut volor aut quae.<br>
+                                            Porestrum quatemquas pario doluptis ipid essit etumquos dolore
+                                            nulparuptat.<br>
+                                            Puda que non con conet quodit maxim eati dollabor aut ad etur si officie
+                                            ndaecup taquae.
+                                        </div>
+                                        <button type="button" class="learn-more text-center mt-4"
+                                            style="position: relative; top: -48px;"><a class="learn-more-text">Δες
+                                                περισσότερα</a></button>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+            <!--end of container-->
+        </section>
+        <section class="text-center photo-grid" style="margin-top: 25px;border-top: 0;">
+            <h1 class="h1" style="padding-bottom: 25px;">Επικοινωνήστε μαζί μας</h1>
+            <div class="row">
+                <div class="col alpi-gallery">
+                    <img src="img/shutterstock_663178852.jpg" class="img-fluid">
+                </div>
+                <div class="col alpi-gallery" style="background-color: black;position:relative;">
+                    <img src="img/shutterstock_1095847970.jpg" class="img-fluid fb-contact">
+                    <img src="img/f_logo_RGB-White_72.png" class="fb-icon"
+                        style="position: relative; top: -330px; z-index: 2; width: 100px; height: 100px; display: none;">
+                </div>
+                <div class="col alpi-gallery">
+                    <img src="img/shutterstock_458767672.jpg" class="img-fluid">
+                </div>
+                <div class="col alpi-gallery" style="background-color: black;position:relative;">
+                    <img src="img/shutterstock_1464216647.jpg" class="img-fluid blog-img">
+                    <p class="blog-txt" style="color: white;position: relative;top: -300px;display:none">Blog</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col alpi-gallery">
+                    <img src="img/shutterstock_765578707.jpg" class="img-fluid">
+                </div>
+                <div class="col alpi-gallery">
+                    <img src="img/shutterstock_1074620357.jpg" class="img-fluid">
+                </div>
+                <div class="col alpi-gallery">
+                    <img src="img/shutterstock_1606121158.jpg" class="img-fluid">
+                </div>
+                <div class="col alpi-gallery">
+                    <img src="img/shutterstock_129424115.jpg" class="img-fluid">
+                </div>
+            </div>
+        </section>
+        <footer class="text-center space--sm footer-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading-block">
+                        <ul class="list-inline list--hover">
+                            <li>
+                                <a href="index.html#" class="footer-links">
+                                    <span style="position: relative;top: -76px;left: -144px;">τα προϊόντα μας</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="footer-links">
+                                    <span style="position: relative;top: -39px;left: -316px;">δημιουργήστε</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="footer-links">
+                                    <span style="position: relative;top: -76px;left: -235px;">γνωρίστε μας</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="footer-links">
+                                    <span style="position: relative;top: -39px;left: -387px;">επικοινωνία</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="footer-links">
+                                    <span style="position: relative;top: -2px;left: -526px;">B2B</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="footer-links">
+                                    <span style="position: relative;top: -76px;left: 141px;">όροι χρήσης</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="footer-links">
+                                    <span style="position: relative;top: -39px;left: 4px;">πολιτική cookies</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="footer-links">
+                                    <span style="position: relative;top: -2px;left: -174px;">GDPR</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="email-input" aria-label="Large" placeholder="email"
+                                        aria-describedby="inputGroup-sizing-sm"
+                                        style="width: 349px;position: relative;left: 367px;top: -45px;height: 55px;z-index: 30;">
+                                </div>
+                                <button type="button" class="btn btn-danger register"
+                                    style="position: relative;left: 283px;width: 146px;height: 57px;z-index: 45;top: -46px;border: black 1px;">Εγγραφή</button>
+                                <img src="img/footer-heart.png"
+                                    style="position: relative;left: 25px;z-index: 45;top: -220px;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div>
+                                <span class="type--fine-print">&copy;
+                                    <span class="update-year"></span> Stack Inc.</span>
+                                <a class="type--fine-print" href="#">Privacy Policy</a>
+                                <a class="type--fine-print" href="#">Legal</a>
+                            </div> -->
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="img/gmo-free.png" class="img-fluid"
+                                        style="position: relative;top: 45px;left: -33px;">
+                                </div>
+                                <div class="col">
+                                    <img src="img/icons-alp.png" class="img-fluid"
+                                        style="position: relative;top: 45px;left: -29px;">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+            <!--end of container-->
+        </footer>
+    </div>
+    <!--<div class="loader"></div>-->
+    <a class="back-to-top inner-link" href="index.html#start" data-scroll-class="100vh:active">
+        <i class="stack-interface stack-up-open-big"></i>
+    </a>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/flickity.min.js"></script>
+    <script src="js/easypiechart.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/ytplayer.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/granim.min.js"></script>
+    <script src="js/jquery.steps.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.home').parent().parent().parent().attr('style', 'height: 100vh!important')
+        }, 600)
+    </script>
+    <script>
+        $('#our_products').mouseenter(function () {
+            $('.hidden-white-block-1').show();
+            $('.hidden-white-block-2').hide();
+            $('#our_products').css('color', '#EA002A')
+            $('#create').css('color', 'white')
+            $('.bar-white').removeClass('show-2');
+            $('.bar-white').addClass('show');
+        });
+        $('.img-carousel').mouseenter(function () {
+            $('.hidden-white-block-2').hide();
+            $('#create').css('color', 'white')
+            $('.bar-white').removeClass('show');
+            $('.bar-white').removeClass('show-2');
+            $('.bar-red').removeClass('show');
+            $('.bar-red').hide();
+        });
+        $('.img-carousel').mouseenter(function () {
+            $('.hidden-white-block-1').hide();
+            $('.hidden-white-block-3').hide();
+            $('.hidden-white-block-4').hide();
+            $('#cheese').css('color', '#192956')
+            $('#pleasure').css('color', '#192956')
+            $('#our_products').css('color', 'white')
+        });
+        $('.hidden-white-block-3').mouseleave(function () {
+            $('.hidden-white-block-3').hide();
+            $('.bar-red').hide();
+        });
+        $('.hidden-white-block-4').mouseleave(function () {
+            $('.hidden-white-block-4').hide();
+            $('.hidden-white-block-1 .bar-red').hide();
+        });
+        $('#create').mouseenter(function () {
+            $('.hidden-white-block-2').show();
+            $('.hidden-white-block-1').hide();
+            $('#create').css('color', '#EA002A')
+            $('#our_products').css('color', 'white')
+            $('.bar-white').removeClass('show');
+            $('.bar-white').addClass('show-2');
+        });
+
+        $('.pleasure').mouseenter(function () {
+            $('.hidden-white-block-3').show();
+            $('.bar-red').show();
+            $('.bar-red').addClass('show');
+            $('#pleasure').css('color', '#EA002A')
+        });
+
+        $('.cheese-hover').mouseenter(function () {
+            $('.hidden-white-block-4').show();
+            $('.bar-red').show();
+            $('.bar-red').addClass('show');
+            $('#cheese').css('color', '#EA002A')
+        });
+
+        $('.hidden-white-block-2 .bar-red').mouseenter(function () {
+            $('.hidden-white-block-3').show();
+            $('.hidden-white-block-2 .bar-red').show();
+            $('.hidden-white-block-2 .bar-red').addClass('show');
+        });
+
+        $('.hidden-white-block-1 .bar-red').mouseenter(function () {
+            $('.hidden-white-block-4').show();
+            $('.hidden-white-block-1 .bar-red').show();
+            $(' .hidden-white-block-1 .bar-red').addClass('show');
+        });
+
+
+
+        $('.right-product-btn').on({
+            "mouseover": function () {
+                this.src = 'img/right-btn-red.png';
+            },
+            "mouseout": function () {
+                this.src = 'img/right-btn.png';
+            }
+        });
+        $('.left-product-btn').on({
+            "mouseover": function () {
+                this.src = 'img/left-btn-red.png';
+            },
+            "mouseout": function () {
+                this.src = 'img/left-btn.png';
+            }
+        });
+        $('.cheese-item').on({
+            "mouseover": function () {
+                this.src = 'img/cheese-red.png';
+                $('.cheese-text h3').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                this.src = 'img/cheese.png';
+                $('.cheese-text h3').css('color', '#192956')
+            }
+        });
+        $('.milk-item').on({
+            "mouseover": function () {
+                this.src = 'img/milk-red.png';
+                $('.milk-text h3').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                this.src = 'img/milk.png';
+                $('.milk-text h3').css('color', '#192956')
+            }
+        });
+        $('.delicatessen-item').on({
+            "mouseover": function () {
+                this.src = 'img/award-red.png';
+                $('.delicatessen-text h3').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                this.src = 'img/award.png';
+                $('.delicatessen-text h3').css('color', '#192956')
+            }
+        });
+        $('.right-product-btn').click(function () {
+            console.log('ok')
+        });
+    </script>
+    <script>
+        $('#mozzarella-img').on({
+            "mouseover": function () {
+                $('#mozzarella-link').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                $('#mozzarella-link').css('color', '#192956')
+            }
+        });
+        $('#kefaloturi-img').on({
+            "mouseover": function () {
+                $('#kefaloturi-link').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                $('#kefaloturi-link').css('color', '#192956')
+            }
+        });
+        $('#saganaki-img').on({
+            "mouseover": function () {
+                $('#saganaki-link').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                $('#saganaki-link').css('color', '#192956')
+            }
+        });
+        $('#emmental-img').on({
+            "mouseover": function () {
+                $('#emmental-link').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                $('#emmental-link').css('color', '#192956')
+            }
+        });
+        $('#edam-img').on({
+            "mouseover": function () {
+                $('#edam-link').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                $('#edam-link').css('color', '#192956')
+            }
+        });
+        $('#gouda-img').on({
+            "mouseover": function () {
+                $('#gouda-link').css('color', '#EA002A')
+            },
+            "mouseout": function () {
+                $('#gouda-link').css('color', '#192956')
+            }
+        });
+        $('.fb-contact').on({
+            "mouseover": function () {
+                $('.fb-icon').show()
+                $('.fb-contact').css('opacity', 0.5)
+            },
+            "mouseout": function (e) {
+                $('.fb-icon').hide()
+                $('.fb-contact').css('opacity', 1)
+                if (e.relatedTarget.hasClass('fb-icon')) {
+                }
+            }
+        });
+        $('.fb-icon').on({
+            "mouseover": function () {
+                $('.fb-icon').show()
+                $('.fb-contact').css('opacity', 0.5)
+            },
+            "mouseout": function () {
+                $('.fb-icon').hide()
+            }
+        });
+
+        $('.blog-img').on({
+            "mouseover": function () {
+                $('.blog-txt').show()
+                $('.blog-img').css('opacity', 0.5)
+            },
+            "mouseout": function () {
+                $('.blog-txt').hide()
+                $('.blog-img').css('opacity', 1)
+            }
+        });
+        $('.blog-txt').on({
+            "mouseover": function () {
+                $('.blog-txt').show()
+                $('.blog-img').css('opacity', 0.5)
+
+            },
+            "mouseout": function () {
+                $('.blog-txt').hide()
+            }
+        });
+
+
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
+
+        // Get the navbar
+        var navbar = document.getElementById("menu2");
+        var white_bar = document.getElementById("bar-w");
+        var hidden_white_block_1 = document.getElementById("block1");
+        var hidden_white_block_2 = document.getElementById("block2");
+        var hidden_white_block_3 = document.getElementById("block3");
+        var hidden_white_block_4 = document.getElementById("block4");
+        var a_logo = document.getElementById("a-logo");
+        var h_logo = document.getElementById("h-logo");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+                hidden_white_block_1.classList.add("sticky-hidden-block")
+                hidden_white_block_2.classList.add("sticky-hidden-block")
+                hidden_white_block_3.classList.add("sticky-hidden-block-after")
+                hidden_white_block_4.classList.add("sticky-hidden-block-after")
+                white_bar.classList.add("sticky-white-bar")
+                a_logo.style.display = "none";
+                h_logo.style.display = "inline-block";
+            } else {
+                navbar.classList.remove("sticky");
+                hidden_white_block_1.classList.remove("sticky-hidden-block");
+                hidden_white_block_2.classList.remove("sticky-hidden-block");
+                hidden_white_block_3.classList.remove("sticky-hidden-block-after");
+                hidden_white_block_4.classList.remove("sticky-hidden-block-after");
+                white_bar.classList.remove("sticky-white-bar")
+                h_logo.style.display = "none";
+                a_logo.style.display = "block";
+            }
+        }
+
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.quality-slider').slick({
+                infinite: true,
+                initialSlide: 2,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true,
+                focusOnSelect: true,
+                nextArrow: '<img id="next-arrow-slider" src="img/right-btn.png">',
+                prevArrow: '<img id="prev-arrow-slider" src="img/left-btn.png">'
+            });
+            $('.quality-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+                $('.slick-current').find('img').removeClass('cheese-not-selected');
+                $('.slick-current').find('button').removeClass('invisible')
+                $('.slick-current').find('p').removeClass('cheese-not-selected');
+            });
+            $('.quality-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                if ($('.slick-slide').hasClass('slick-current')){
+                    $('.slick-slide').find('img').addClass('cheese-not-selected');
+                    $('.slick-slide').find('button').addClass('invisible')
+                    $('.slick-slide').find('p').addClass('cheese-not-selected');
+                }
+            });
+            $('#next-arrow-slider').on({
+                "mouseover": function () {
+                    this.src = 'img/right-btn-red.png';
+                },
+                "mouseout": function () {
+                    this.src = 'img/right-btn.png';
+                }
+            });
+            $('#prev-arrow-slider').on({
+                "mouseover": function () {
+                    this.src = 'img/left-btn-red.png';
+                },
+                "mouseout": function () {
+                    this.src = 'img/left-btn.png';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
